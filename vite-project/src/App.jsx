@@ -43,9 +43,23 @@ function App() {
     />
   </div>
 
-  <p className="lead text-body-secondary">
-    Say no more to manual tracking and the stress of having to log in every single job application you have submitted. 
-  </p>
+  <p
+  className="lead text-body-secondary"
+  id="work"
+  style={{
+    textAlign: 'center',
+    marginLeft: '100px',
+    marginRight: '100px',
+    marginTop: '40px'
+  }}
+>
+  Say goodbye to the overwhelming task of manually tracking 
+  your job applications and the frustration of logging each 
+  submission one by one. Imagine a streamlined process that 
+  removes the stress, saves you time, and keeps all your 
+  applications organized effortlessly. With this solution, 
+  you can focus on what truly matters—landing your dream job.
+</p>
 </section>
 
 
