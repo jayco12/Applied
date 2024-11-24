@@ -1,0 +1,27 @@
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: auto;
+    padding: 1rem;
+}
+.nav-pills .nav-link.active {
+    background-color: black !important;
+    color: white !important; /* White text on black background */
+  }
+.btn-dark {
+    background-color: black !important;
+    color: white !important;
+  }
+  
+.btn-dark:hover {
+    background-color: #333 !important; /* Darker shade on hover */
+    color: white !important; /* Keeps text white on hover */
+  }
+.homer{
+    margin-top: -30px;
+    height: 550px;
+    background-image: url('back.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
