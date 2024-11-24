@@ -1,8 +1,3 @@
-// Extracts text content from the page
-let pageText = document.body.innerText;
-
-// Send this extracted text to the background script
-chrome.runtime.sendMessage({
-    action: "sendToNotion",
-    text: pageText
-});
+// The content script is only needed if you want to add additional functionality in the page directly
+// Here you can place other logic for DOM manipulation, etc.
+console.log("Content script is running!");
