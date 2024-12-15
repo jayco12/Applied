@@ -1,31 +1,112 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Job Scraper</title>
-    <style>
-      body {
-        width: 300px;
-        font-family: Arial, sans-serif;
-      }
-      button {
-        padding: 10px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        cursor: pointer;
-      }
-      button:hover {
-        background-color: #45a049;
-      }
-      #job-details {
-        margin-top: 15px;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Job Scraper</h1>
-    <button id="extract">Extract Job Title</button>
-    <div id="output"></div>
-    <script src="popup.js"></script>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Scraper</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom right, #2b5876, #4e4376);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 250px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 20px 30px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .container:hover {
+      transform: translateY(-5px);
+    }
+
+    h1 {
+      font-size: 1.8em;
+      margin-bottom: 10px;
+      font-weight: 600;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+    h5 {
+      margin-bottom: 10px;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    button {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 1em;
+      color: #fff;
+      background: linear-gradient(to right, #ff8c00, #ff5800);
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+      background: linear-gradient(to right, #ff5800, #ff4500);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    }
+
+    #output {
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      font-size: 0.9em;
+      line-height: 1.5;
+      text-align: left;
+      white-space: pre-wrap;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    }
+
+    .footer {
+      margin-top: 15px;
+      font-size: 0.85em;
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    .footer a {
+      color: #ff8c00;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer a:hover {
+      color: #ff4500;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Applied</h1>
+    <h5>I helped you get job details</h5>
+    <button id="extract">Extract Job Details</button>
+    <div id="output">Job details will appear here...</div>
+    <div class="footer">
+      Built with ❤️ by <a href="#">Joseph Oduyebo</a>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
 </html>
