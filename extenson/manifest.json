@@ -1,25 +1,24 @@
 {
-    "manifest_version": 3,
-    "name": "Job Details Extractor",
-    "version": "1.0",
-    "permissions": [
-      "activeTab"
-    ],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "action": {
-      "default_popup": "popup/popup.html"
-    },
-    "host_permissions": [
-      "http://*/*",
-      "https://*/*"
-    ],
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ]
-  }
-  
+  "manifest_version":  3,
+  "name": "Job Scraper",
+  "version": "4.0",
+  "description": "Extract job details from webpages",
+  "permissions": ["activeTab", "scripting", "tabs"],
+  "host_permissions": ["<all_urls>",
+  "http://localhost:3000/*",
+  "https://api.notion.com/*"],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["./content.js"]
+    }
+  ]
+}

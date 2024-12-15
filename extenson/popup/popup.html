@@ -1,14 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Job Tracker</title>
-  <link rel="stylesheet" href="popup.css">
-</head>
-<body>
-  <h1>Job Tracker</h1>
-  <button id="extract">Extract Job Title</button>
-  <div id="output"></div>
-  <script src="popup.js"></script>
-</body>
+<html>
+  <head>
+    <title>Job Scraper</title>
+    <style>
+      body {
+        width: 300px;
+        font-family: Arial, sans-serif;
+      }
+      button {
+        padding: 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      #job-details {
+        margin-top: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Job Scraper</h1>
+    <button id="extract">Extract Job Title</button>
+    <div id="output"></div>
+    <script src="popup.js"></script>
+  </body>
 </html>
