@@ -1,4 +1,3 @@
 chrome.runtime.onInstalled.addListener(() => {
-    console.log("Job Tracker Extension installed!");
-  });
-  
+  console.log("Job Tracker Extension installed!");
+});
